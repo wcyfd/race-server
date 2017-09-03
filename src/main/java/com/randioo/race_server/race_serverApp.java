@@ -51,7 +51,7 @@ public class race_serverApp {
         SpringContext.initSpringCtx("ApplicationContext.xml");
         RaceService raceService = new RaceServiceImpl();
         long t1 = System.currentTimeMillis();
-        raceService.createRace(null);
+//        raceService.createRace(null);
         raceService.getRace(null);
         long t2 = System.currentTimeMillis();
         System.out.println(t2-t1);

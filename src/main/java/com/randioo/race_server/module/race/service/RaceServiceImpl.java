@@ -16,7 +16,7 @@ public class RaceServiceImpl extends ObserveBaseService implements RaceService {
 
     @Override
     public void createRace(Role role) {
-        List<Object> list = new ArrayList<>();
+        List<RaceEntity> list = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             RaceEntity raceEntity = new RaceEntity();
             raceEntity.setRaceId(i);
@@ -31,7 +31,7 @@ public class RaceServiceImpl extends ObserveBaseService implements RaceService {
 
     @Override
     public void getRace(Role role) {
-        List<Object> list = JedisUtils.getObjectList(RaceEntity.class, "races");
+        List<RaceEntity> list = JedisUtils.getObjectList(RaceEntity.class, "races");
         System.out.println(list);
     }
 
